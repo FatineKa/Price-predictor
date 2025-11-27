@@ -52,10 +52,9 @@ if st.button("Predict Price"):
     ]).reshape(1, -1)
 
     prediction = model.predict(input_data)[0]
-
-    st.success(f"Estimated Selling Price: **{prediction:.2f} Euro**")
     st.success(f"Estimated Selling Price: **{prediction:.2f} €**")
 
 # Footer
 st.write("---")
 st.caption("Made using Streamlit | Fatin Kassabi")
+
