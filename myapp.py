@@ -17,7 +17,7 @@ st.sidebar.title("Input Parameters")
 st.sidebar.write("Fill in the car details below:")
 
 year = st.sidebar.number_input("Year of Manufacture", 1990, 2024, 2018)
-present_price = st.sidebar.number_input("Present Price (in lakhs)", 0.1, 100.0, 5.0)
+present_price = st.sidebar.number_input("Present Price (in Euros)", 0.1, 100.0, 5.0)
 kms = st.sidebar.number_input("Kilometers Driven", 0, 500000, 20000)
 
 fuel = st.sidebar.selectbox("Fuel Type", ["Petrol", "Diesel", "CNG"])
@@ -52,8 +52,9 @@ if st.button("Predict Price"):
 
     prediction = model.predict(input_data)[0]
 
-    st.success(f"💰 Estimated Selling Price: **{prediction:.2f} lakhs**")
+    st.success(f"Estimated Selling Price: **{prediction:.2f} €**")
 
 # Footer
 st.write("---")
 st.caption("Made using Streamlit | Fatin Kassabi")
+
